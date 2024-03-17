@@ -2,13 +2,18 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Recipes from "../Recipes/Recipes";
 import Recipe_cook from "../Recipes_cook/Recipe_cook";
+import CurrentCooking from "../Cooking/CurrentCooking";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 
 const Recipes_box = () => {
 
     const [recipeses, setrecipeses] = useState([]);
     const [wantcook, setwantcook] = useState([]);
-
-
+    const [cooking, setcooking] = useState([]);
+    
     useEffect(() => {
         fetch('recipes.json')
         .then(res => res.json())
@@ -20,14 +25,17 @@ const Recipes_box = () => {
         if(!isExist){
             const newcook = [...wantcook, Recipes];
             setwantcook(newcook);
+            toast("Successfully Added !");
         }
         else {
-            alert("Already in Cook");
+            toast("Already it is in Preparing Section !");
         }
     }
     const handledelete = (id) => {
-        const newwantcook = wantcook.filter(item => item.recipe_id != id);
+        const newwantcook = wantcook.filter(item => item.recipe_id != id.recipe_id);
         setwantcook(newwantcook);
+        const newcooking = [...cooking, id];
+        setcooking(newcooking);
     }
 
     return (
@@ -42,11 +50,21 @@ const Recipes_box = () => {
                         recipeses.map(recipes =><Recipes key={recipeses.recipe_id}  recipes={recipes} handleWantcook={handleWantcook}></Recipes>)
                     }
                 </div>
-                <div className="w-1/4">
-                    <Recipe_cook wantcook={wantcook} handledelete={handledelete}></Recipe_cook>
+                <div className="w-1/4 rounded-3xl border-2 border-[#28282852] p-3">
+                    <h2 className='text-center text-2xl font-medium'>Want to cook: {wantcook.length}</h2>
+                    <hr className='border-t-2' />
+                    <div className="bg-[#8f8f8f33] rounded-xl my-2 p-1">
+                        <Recipe_cook wantcook={wantcook} handledelete={handledelete}></Recipe_cook>
+                    </div>
+
+                    <h2 className='text-center text-2xl font-medium mt-5'>Currently cooking: {cooking.length}</h2>
+                    <hr className='border-t-2' />
+                    <div>
+                        <CurrentCooking cooking={cooking} ></CurrentCooking>
+                    </div>
                 </div>
                 
-
+                <ToastContainer />
             </div>
             
         </div>
