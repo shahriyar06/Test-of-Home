@@ -7,7 +7,7 @@ const Recipes_box = () => {
 
     const [recipeses, setrecipeses] = useState([]);
     const [wantcook, setwantcook] = useState([]);
-    // const [toggle, settoggle] = useState(false);
+
 
     useEffect(() => {
         fetch('recipes.json')
@@ -25,6 +25,10 @@ const Recipes_box = () => {
             alert("Already in Cook");
         }
     }
+    const handledelete = (id) => {
+        const newwantcook = wantcook.filter(item => item.recipe_id != id);
+        setwantcook(newwantcook);
+    }
 
     return (
         <div className="lg:w-10/12 lg:mx-auto mt-14 mx-3">
@@ -39,7 +43,7 @@ const Recipes_box = () => {
                     }
                 </div>
                 <div className="w-1/4">
-                    <Recipe_cook wantcook={wantcook}></Recipe_cook>
+                    <Recipe_cook wantcook={wantcook} handledelete={handledelete}></Recipe_cook>
                 </div>
                 
 

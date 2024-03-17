@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import Cooking from './../Cooking/Cooking';
 
-const Recipe_cook = ({wantcook}) => {
+const Recipe_cook = ({wantcook,handledelete}) => {
     const {recipe_id, recipe_name, preparing_time, calories} = wantcook;
     // const [cooking, setcooking] = useState([]);
+    
 
     // const handlecooking = wantcook => {
     //     const newcooking = [...cooking, wantcook];
@@ -26,14 +27,14 @@ const Recipe_cook = ({wantcook}) => {
                     </thead>
                     <tbody>
                         {
-                            wantcook.map((wantcook) => (
+                            wantcook.map((wantcook, index) => (
                              <tr className='text-base font-normal mb-5' key={recipe_id}>
-                                <td className='text-base font-normal'>{wantcook.recipe_id}</td>
+                                <td className='text-base font-normal'>{index+1}</td>
                                 <td className='text-base font-normal'>{wantcook.recipe_name}</td>
                                 <td className='text-base font-normal'>{wantcook.preparing_time}</td>
                                 <td className='text-base font-normal'>{wantcook.calories}</td>
                                 <td>
-                                  <button className="btn p-1 bg-[#0BE58A] border-[#0BE58A] text-base rounded-full" >Preparing </button>
+                                  <button onClick={()=>handledelete(wantcook.recipe_id)} className="btn p-1 bg-[#0BE58A] border-[#0BE58A] text-base rounded-full" >Preparing </button>
                                 </td>
                             </tr>
                             ))  
