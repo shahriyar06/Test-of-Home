@@ -5,7 +5,9 @@ import Recipe_cook from "../Recipes_cook/Recipe_cook";
 
 const Recipes_box = () => {
 
-    const [recipeses, setrecipeses] = useState([])
+    const [recipeses, setrecipeses] = useState([]);
+    const [wantcook, setwantcook] = useState([]);
+    // const [toggle, settoggle] = useState(false);
 
     useEffect(() => {
         fetch('recipes.json')
@@ -13,19 +15,27 @@ const Recipes_box = () => {
         .then(data => setrecipeses(data))
     },[])
 
+    const handleWantcook = Recipes => {
+            const newcook = [...wantcook, Recipes];
+            setwantcook(newcook);
+    }
+
     return (
         <div className="lg:w-10/12 lg:mx-auto mt-14 mx-3">
             <div className="text-center w-3/5 mx-auto mb-6">
                 <h2 className="text-5xl font-extrabold text-black mb-6">Our Recipes</h2>
                 <p className="text-xl  text-[#878787]">Bengali cuisine: Vibrant spices, seafood delights, aromatic rice dishes, and sweet treats, capturing the essence of Bengali culture and tradition.</p>
             </div>
-            <div>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div className="lg:flex gap-4">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:w-3/4">
                     {
-                        recipeses.map(recipes =><Recipes key={recipeses.recipe_id}  recipes={recipes}></Recipes>)
+                        recipeses.map(recipes =><Recipes key={recipeses.recipe_id}  recipes={recipes} handleWantcook={handleWantcook}></Recipes>)
                     }
                 </div>
-                <Recipe_cook></Recipe_cook>
+                <div className="w-1/4">
+                    <Recipe_cook wantcook={wantcook}></Recipe_cook>
+                </div>
+                
 
             </div>
             
