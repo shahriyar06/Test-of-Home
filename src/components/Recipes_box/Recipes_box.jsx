@@ -15,9 +15,15 @@ const Recipes_box = () => {
         .then(data => setrecipeses(data))
     },[])
 
-    const handleWantcook = Recipes => {
+    const handleWantcook = (Recipes) => {
+        const isExist = wantcook.find((pd) => pd.recipe_id == Recipes.recipe_id);
+        if(!isExist){
             const newcook = [...wantcook, Recipes];
             setwantcook(newcook);
+        }
+        else {
+            alert("Already in Cook");
+        }
     }
 
     return (
