@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <h1>how are you?</h1>
+     
       <Recipes_box></Recipes_box>
     </>
   )
