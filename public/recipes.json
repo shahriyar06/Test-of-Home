@@ -1,0 +1,75 @@
+[
+    {
+      "recipe_id": 1,
+      "recipe_name": "Bengali Fish Curry (Macher Jhol)",
+      "recipe_image": "https://i.ibb.co/jMdX2Y7/top-view-delicious-fish-meal-tray.jpg",
+      "short_description": "A traditional Bengali fish curry with aromatic spices and tangy flavor.",
+      "ingredients": ["500g fish fillets (rohu or catfish)", "2 potatoes, cut into wedges", "1 tomato, chopped", "1 onion, sliced", "2 green chilies, slit", "1 tsp turmeric powder", "1 tsp red chili powder", "1 tsp cumin powder", "Salt to taste", "2 tbsp mustard oil", "2 cups water", "Fresh coriander leaves for garnish"],
+      "preparing_time": "40 min",
+      "calories": "300 calories"
+    },
+    {
+      "recipe_id": 2,
+      "recipe_name": "Beef Bhuna",
+      "recipe_image": "https://i.ibb.co/B2R243L/caucasian-meat-govurma-with-herbs-tomatoes.jpg",
+      "short_description": "A spicy and flavorful Bangladeshi beef dish cooked with onions, garlic, and ginger.",
+      "ingredients": ["500g beef, cut into cubes", "3 onions, thinly sliced", "2 tomatoes, chopped", "2 tbsp ginger-garlic paste", "1 tsp turmeric powder", "2 tsp chili powder", "1 tsp coriander powder", "1 tsp cumin powder", "1/2 cup yogurt", "4 tbsp vegetable oil", "Salt to taste", "Fresh coriander leaves for garnish"],
+      "preparing_time": "50 min",
+      "calories": "350 calories"
+    },
+    {
+      "recipe_id": 3,
+      "recipe_name": "Chicken Biryani",
+      "recipe_image": "https://i.ibb.co/vsZXsZn/top-view-pakistan-meal-assortment.jpg",
+      "short_description": "A fragrant and flavorful rice dish made with tender chicken and aromatic spices.",
+      "ingredients": ["500g chicken, cut into pieces", "2 cups basmati rice, soaked", "1 cup yogurt", "2 onions, thinly sliced", "2 tomatoes, chopped", "4 green chilies, slit", "1/4 cup mint leaves", "1/4 cup coriander leaves", "2 tbsp ginger-garlic paste", "1 tsp turmeric powder", "1 tbsp biryani masala", "Salt to taste", "4 tbsp ghee", "4 cups water", "Saffron strands soaked in milk for garnish"],
+      "preparing_time": "60 min",
+      "calories": "400 calories"
+    },
+    {
+      "recipe_id": 4,
+      "recipe_name": "Panta Bhat",
+      "recipe_image": "https://i.ibb.co/k1fjSny/unnamed.jpg",
+      "short_description": "A traditional Bengali dish made with fermented rice served with fried fish and pickles.",
+      "ingredients": ["2 cups leftover cooked rice", "Water for soaking", "Salt to taste", "Fried fish and pickles for serving"],
+      "preparing_time": "15 min",
+      "calories": "200 calories"
+    },
+    {
+      "recipe_id": 5,
+      "recipe_name": "Shorshe Ilish",
+      "recipe_image": "https://i.ibb.co/M13qcCh/Shorshe-ilish-1.jpg",
+      "short_description": "A classic Bengali dish featuring Hilsa fish cooked in a mustard sauce.",
+      "ingredients": ["4 pieces Hilsa fish", "4 tbsp mustard paste", "2 green chilies, slit", "1/2 tsp turmeric powder", "1/2 tsp red chili powder", "Salt to taste", "2 tbsp mustard oil", "Water as needed"],
+      "preparing_time": "30 min",
+      "calories": "280 calories"
+    },
+    {
+      "recipe_id": 6,
+      "recipe_name": "Chingri Malai Curry",
+      "recipe_image": "https://i.ibb.co/2g8zY7F/delicious-shrimp-dish-high-angle.jpg",
+      "short_description": "A creamy and aromatic prawn curry cooked with coconut milk and spices.",
+      "ingredients": ["500g prawns, deveined", "1 onion, finely chopped", "1 tomato, chopped", "1/2 cup coconut milk", "2 green chilies, slit", "1 tsp ginger paste", "1 tsp garlic paste", "1 tsp turmeric powder", "1 tsp red chili powder", "1 tsp garam masala powder", "Salt to taste", "2 tbsp mustard oil", "Fresh coriander leaves for garnish"],
+      "preparing_time": "45 min",
+      "calories": "320 calories"
+    },
+    {
+      "recipe_id": 7,
+      "recipe_name": "Bengali Bhapa Doi",
+      "recipe_image": "https://i.ibb.co/TbzHL69/bhapa-doi-recipe-bengali-sweet-yogurt-dessert.jpg",
+      "short_description": "A traditional Bengali dessert made with steamed yogurt and sweetened with jaggery.",
+      "ingredients": ["500g plain yogurt", "100g jaggery (or sugar)", "1/4 cup condensed milk", "1/2 tsp cardamom powder", "1/4 cup chopped nuts (cashews, almonds, pistachios)", "1/4 cup raisins"],
+      "preparing_time": "45 min",
+      "calories": "250 calories"
+    },
+    {
+      "recipe_id": 8,
+      "recipe_name": "Bengali Chingri Bhorta",
+      "recipe_image": "https://i.ibb.co/XypWKLy/kucho-chingri-vorta-recipe.jpg",
+      "short_description": "A flavorful Bengali shrimp mash cooked with onions, green chilies, and spices.",
+      "ingredients": ["500g shrimp, cleaned and deveined", "2 onions, chopped", "4 green chilies, chopped", "2 cloves garlic, minced", "1/2 tsp turmeric powder", "1/2 tsp red chili powder", "Salt to taste", "2 tbsp mustard oil", "Fresh coriander leaves for garnish"],
+      "preparing_time": "35 min",
+      "calories": "280 calories"
+    }       
+  ]
+  
