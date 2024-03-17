@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types';
+import { IoTimeOutline } from "react-icons/io5";
+import { AiOutlineFire } from "react-icons/ai";
 
 const Recipes = ({recipes}) => {
     const {recipe_name, recipe_image, short_description, preparing_time, calories, ingredients} = recipes;
@@ -19,9 +21,9 @@ const Recipes = ({recipes}) => {
                         }
                     </div>
                     <hr className="my-5" />
-                    <div className="text-[#282828] flex gap-6">
-                        <h2> {preparing_time} </h2>
-                        <h3>{calories}</h3>
+                    <div className="text-[#282828] flex gap-7">
+                        <h2 className='flex items-center gap-2'><IoTimeOutline className='text-xl' /> {preparing_time} </h2>
+                        <h3 className='flex items-center gap-2'><AiOutlineFire className='text-xl' /> {calories}</h3>
                     </div>
                     <div className="mt-5">
                     <button className="btn bg-[#0BE58A] border-[#0BE58A] text-base rounded-full px-7">Want to Cook</button>
